@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Web Automation</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+
+
+
+<body class="test-view  standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Web Automation</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">04-07-2020 16:52:32</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+									<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-exclamation-circle"></i>
+										</a>
+										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>											<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																																																							<div class="dropdown-divider"></div>
+											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+										</ul>
+									</li>
+																		<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-tag"></i>
+										</a>
+										<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+												<a class="dropdown-item" href="#">Smoke</a>
+												<a class="dropdown-item" href="#">Login</a>
+										</ul>
+                                    </li>
+																		<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-tablet"></i>
+										</a>
+										<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+												<a class="dropdown-item" href="#">Chrome</a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+										<li class="test-item" status="fail" author="" device="Chrome" tag="Smoke"> 
+											<div class="status-avatar fail-bg">
+												<i class="fa fa-times text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">LoginTest_invalidLogin</p> 
+													<p class="duration text-sm">0h:0m:9s+862ms</p> 
+													<span class="datetime">16:52:44 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-fail">LoginTest_invalidLogin</h5>
+															<span class='badge badge-success'>04-07-2020 16:52:44</span>
+															<span class='badge badge-danger'>04-07-2020 16:52:54</span>
+															<span class='badge badge-default'>0h:0m:9s+862ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Smoke</span> 	
+						<span class="badge badge-pill badge-default"><i class="fa fa-tablet"></i> Chrome</span> 
+	</div>
+
+														</div>
+																												<div class="m-t-10 m-l-5">
+															LoginTest_invalidLogin
+														</div>
+													</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:52:50</td>
+				<td>
+Launch Web Application<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:52:50</td>
+				<td>
+Clicked on Toggle Menu<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:52:51</td>
+				<td>
+Clicked on Login Menu Option<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:52:51</td>
+				<td>
+Enter UserName<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:52:52</td>
+				<td>
+Enter Password<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:52:53</td>
+				<td>
+Clicked on Login Button<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>16:52:54</td>
+				<td>
+<b style="color: Red; ">Fail</b>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>16:52:54</td>
+				<td>
+Test ended with:    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at SeleniumNUnitExtentFramework.pageMethods.LoginPage.verifyDashboard() in D:\Automation\NetAutomation\SeleniumNUnitExtentFramework\SeleniumNUnitExtentFramework\pageMethods\LoginPage.cs:line 60
+   at SeleniumNUnitExtentFramework.TestCases.LoginTest.LoginTest_invalidLogin() in D:\Automation\NetAutomation\SeleniumNUnitExtentFramework\SeleniumNUnitExtentFramework\TestCases\LoginTest.cs:line 42									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="detail-foot">
+	<ul class="attachments">
+		<li>
+			<a href="Screenshots\LoginTest_invalidLogin_4_52_53.png" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+		                <span class="file-name">LoginTest_invalidLogin_4_52_53.png</span>
+		                <span class="file-size"> 0Kb</span>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="Chrome" tag="Login"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">LoginTest_validLogin</p> 
+													<p class="duration text-sm">0h:0m:8s+776ms</p> 
+													<span class="datetime">16:53:19 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">LoginTest_validLogin</h5>
+															<span class='badge badge-success'>04-07-2020 16:53:19</span>
+															<span class='badge badge-danger'>04-07-2020 16:53:28</span>
+															<span class='badge badge-default'>0h:0m:8s+776ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login</span> 	
+						<span class="badge badge-pill badge-default"><i class="fa fa-tablet"></i> Chrome</span> 
+	</div>
+
+														</div>
+																												<div class="m-t-10 m-l-5">
+															LoginTest_validLogin
+														</div>
+													</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:53:25</td>
+				<td>
+Launch Web Application<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:53:25</td>
+				<td>
+Clicked on Toggle Menu<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:53:26</td>
+				<td>
+Clicked on Login Menu Option<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:53:26</td>
+				<td>
+Enter UserName<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:53:26</td>
+				<td>
+Enter Password<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>16:53:27</td>
+				<td>
+Clicked on Login Button<br>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>16:53:28</td>
+				<td>
+<b style="color: MediumSeaGreen; ">Pass</b>									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+
+</html>
